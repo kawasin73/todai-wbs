@@ -7,7 +7,7 @@ class Resolver
     @cur = 0
     @sp = [0]
     @counter = [0]
-    @list = [""]
+    @list = [nil]
     @cache = false
   end
 
@@ -59,7 +59,7 @@ class Resolver
   def flush
     @sheet.add_row(@list)
     # reset
-    @list = @list.map {|_| ""}
+    @list = @list.map {|_| nil}
     @cache = false
   end
 
